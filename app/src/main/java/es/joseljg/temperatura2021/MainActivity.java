@@ -37,6 +37,7 @@ public class MainActivity extends AppCompatActivity {
             centigrados = Double.valueOf(texto);
         }
 
+
         kelvin = centigrados + 273.0;
         farenheit = centigrados * 9.0/5.0 + 32.0;
         txt_kelvin.setText("kelvin: " + String.valueOf(kelvin)+"ºK");
