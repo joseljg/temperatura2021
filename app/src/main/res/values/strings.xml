@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">temperatura2021</string>
+    <string name="titulo">Conversor de temperaturas</string>
+    <string name="grados_centigrados">Grados centigrados</string>
+    <string name="kelvin_0_0">kelvin: 0.0</string>
+    <string name="convertir">Convertir</string>
+    <string name="farenheit_0_0">Farenheit: 0.0</string>
 </resources>

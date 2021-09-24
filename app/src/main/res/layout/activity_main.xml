@@ -7,12 +7,74 @@
     tools:context=".MainActivity">
 
     <TextView
-        android:layout_width="wrap_content"
+        android:id="@+id/txt_titulo"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginStart="@dimen/margenes"
+        android:layout_marginTop="@dimen/margenes"
+        android:layout_marginEnd="@dimen/margenes"
+        android:background="@color/fondoTitulo"
+        android:gravity="center"
+        android:padding="@dimen/tamPadding"
+        android:text="@string/titulo"
+        android:textColor="@color/colorTitulo"
+        android:textSize="@dimen/tamTitulo"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.429"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <EditText
+        android:id="@+id/edt_centigrados"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/tamMinimo"
+        android:layout_marginStart="@dimen/margenes"
+        android:layout_marginTop="@dimen/margenes"
+        android:layout_marginEnd="@dimen/margenes"
+        android:autofillHints="0.0"
+        android:ems="10"
+        android:hint="@string/grados_centigrados"
+        android:inputType="number|numberDecimal"
+        android:minHeight="@dimen/tamMinimo"
+        android:textColorHint="@color/colorLetra"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt_titulo" />
+
+    <TextView
+        android:id="@+id/txt_kelvin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="@dimen/margenes"
+        android:gravity="start"
+        android:text="@string/kelvin_0_0"
+        android:textSize="@dimen/tamTitulo"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edt_centigrados" />
+
+    <TextView
+        android:id="@+id/txt_farenheit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="@dimen/margenes"
+        android:gravity="start"
+        android:text="@string/farenheit_0_0"
+        android:textSize="@dimen/tamTitulo"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt_kelvin" />
+
+    <Button
+        android:id="@+id/bt_convertir"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margenes"
+        android:text="@string/convertir"
+        android:onClick="convertir"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt_farenheit" />
 </androidx.constraintlayout.widget.ConstraintLayout>

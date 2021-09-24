@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="tamTitulo"> 24sp</dimen>
+    <dimen name="margenes"> 16dp </dimen>
+    <dimen name="tamPadding"> 10dp </dimen>
+    <dimen name="tamMinimo"> 48dp </dimen>
+</resources>
