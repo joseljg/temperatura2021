@@ -3,6 +3,10 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/workspace_android/temperatura2021/app/src/main/res/drawable/bordes_redondos.xml" value="0.14635416666666667" />
+        <entry key="..\:/workspace_android/temperatura2021/app/src/main/res/drawable/boton_redondo.xml" value="0.14635416666666667" />
+        <entry key="..\:/workspace_android/temperatura2021/app/src/main/res/drawable/ic_launcher_background.xml" value="0.14635416666666667" />
+        <entry key="..\:/workspace_android/temperatura2021/app/src/main/res/drawable/redondear.xml" value="0.14635416666666667" />
         <entry key="..\:/workspace_android/temperatura2021/app/src/main/res/layout/activity_main.xml" value="0.25416666666666665" />
         <entry key="..\:/workspace_android/temperatura2021/app/src/main/res/layout/activity_main2.xml" value="0.25416666666666665" />
       </map>

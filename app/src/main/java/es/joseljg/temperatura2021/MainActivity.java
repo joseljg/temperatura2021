@@ -2,8 +2,12 @@ package es.joseljg.temperatura2021;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.Activity;
+import android.inputmethodservice.Keyboard;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -27,21 +31,33 @@ public class MainActivity extends AppCompatActivity {
         txt_farenheit = (TextView) findViewById(R.id.txt_farenheit);
     }
 
+    public void ocultarTeclado(Activity activity)
+    {
+        InputMethodManager inputMethodManager = (InputMethodManager) activity.getSystemService (Activity.INPUT_METHOD_SERVICE);
+        inputMethodManager.hideSoftInputFromWindow (activity.getCurrentFocus (). getWindowToken (), 0);
+    }
+
     public void convertir(View view) {
-        String texto = String.valueOf(edt_centigrados.getText());
-        if(texto.isEmpty())
-        {
+            ocultarTeclado(this);
+            String texto = String.valueOf(edt_centigrados.getText());
+             if(texto.isEmpty())
+               {
             centigrados = 0.0;
-        }
-        else{
+               }
+               else{
             centigrados = Double.valueOf(texto);
-        }
+              }
+
+            Log.i("pepito", "los grados centigrados valen " + String.valueOf(centigrados));
+            kelvin = centigrados + 273.0;
+            Log.i("pepito", "los kelvin valen " + String.valueOf(kelvin));
+            farenheit = centigrados * 9.0/5.0 + 32.0;
+            Log.i("pepito", "los grados farenheit valen" + String.valueOf(farenheit));
+            txt_kelvin.setText("kelvin: " + String.valueOf(kelvin)+"ºK");
+            txt_farenheit.setText("farenheit: " + String.valueOf(farenheit)+"ºF");
+            Toast.makeText(this,"conversion correcta", Toast.LENGTH_LONG).show();
 
 
-        kelvin = centigrados + 273.0;
-        farenheit = centigrados * 9.0/5.0 + 32.0;
-        txt_kelvin.setText("kelvin: " + String.valueOf(kelvin)+"ºK");
-        txt_farenheit.setText("farenheit: " + String.valueOf(farenheit)+"ºF");
-        Toast.makeText(this,"conversion correcta", Toast.LENGTH_LONG).show();
+
     }
 }

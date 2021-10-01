@@ -4,6 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:padding="10dp"
+    android:paddingStart="20dp"
     tools:context=".MainActivity">
 
     <TextView
@@ -33,10 +35,12 @@
         android:layout_marginTop="@dimen/margenes"
         android:layout_marginEnd="@dimen/margenes"
         android:autofillHints="0.0"
+        android:background="@drawable/boton_redondo"
         android:ems="10"
         android:hint="@string/grados_centigrados"
         android:inputType="number|numberDecimal"
         android:minHeight="@dimen/tamMinimo"
+        android:paddingStart="20dp"
         android:textColorHint="@color/colorLetra"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -44,11 +48,14 @@
 
     <TextView
         android:id="@+id/txt_kelvin"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="222dp"
+        android:layout_height="64dp"
         android:layout_marginStart="16dp"
         android:layout_marginTop="@dimen/margenes"
+        android:background="@drawable/boton_redondo"
         android:gravity="start"
+        android:padding="10dp"
+        android:paddingStart="30dp"
         android:text="@string/kelvin_0_0"
         android:textSize="@dimen/tamTitulo"
         app:layout_constraintStart_toStartOf="parent"
@@ -56,11 +63,14 @@
 
     <TextView
         android:id="@+id/txt_farenheit"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="232dp"
+        android:layout_height="59dp"
         android:layout_marginStart="16dp"
         android:layout_marginTop="@dimen/margenes"
+        android:background="@drawable/boton_redondo"
         android:gravity="start"
+        android:padding="10dp"
+        android:paddingStart="30dp"
         android:text="@string/farenheit_0_0"
         android:textSize="@dimen/tamTitulo"
         app:layout_constraintStart_toStartOf="parent"
@@ -70,11 +80,11 @@
         android:id="@+id/bt_convertir"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/margenes"
-        android:text="@string/convertir"
+        android:layout_marginTop="56dp"
         android:onClick="convertir"
+        android:text="@string/convertir"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintHorizontal_bias="0.054"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txt_farenheit" />
 </androidx.constraintlayout.widget.ConstraintLayout>
